@@ -1,4 +1,17 @@
 body {
-    background-color: lightgrey;
+    background-color: #EBD4CB;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+    color: #890620;
+}
+
+b {
+    color: #B6465F;
+}
+
+a {
+    color: #DA9F93;
 }
