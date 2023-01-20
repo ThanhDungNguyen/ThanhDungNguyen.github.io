@@ -100,6 +100,31 @@ function filterLongWords(words, i) {
 }
 
 console.log("Expected output if filterLongWords(\"midnight\", \"freedom\", \"possibility\", \"grocery\", \"church\", 7) is [\"midnight\", \"possibility\"]  " + myFunctionTest(["midnight", "possibility"], filterLongWords(["midnight", "freedom", "possibility", "grocery", "church"], 7)));
+
+// 8. Modify the jsfiddle on the map/filter/reduce slide
+const a = [1,3,5,3,3]; 
+
+// a) multiply each element by 10; 
+const b = a.map(function(elem, i, array) {
+  return elem + 10;
+})
+document.writeln(b.toString() + "<br/>");
+
+// b) return array with all elements equal to 3; 
+const c = a.filter(function(elem, i, array){
+  return elem == 3;});
+document.writeln(c.toString() + "<br/>");
+
+// c) return the product of all elements;
+const d = a.reduce(function(prevValue, elem, i, array){
+  return prevValue * elem;
+});
+document.writeln(d+ "<br/>");
+
+const d2 = a.find(function(elem) {return elem > 1;}); //3
+const d3 = a.findIndex(function(elem) {return elem > 1;}); //1
+document.writeln(d2+ "<br/>");
+document.writeln(d3+ "<br/>");
     </script>
 </head>
 <body>
