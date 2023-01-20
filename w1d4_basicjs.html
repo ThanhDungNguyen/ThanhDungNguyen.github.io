@@ -89,6 +89,17 @@ function findLongestWord(words) {
 }
 
 console.log("Expected output if findLongestWord(\"midnight\", \"freedom\", \"possibility\", \"grocery\", \"church\") is 11  " + myFunctionTest(11, findLongestWord(["midnight", "freedom", "possibility", "grocery", "church"])));
+
+// 7. Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
+function filterLongWords(words, i) {
+  let longWords = [];
+  for (j in words)
+    if (words[j].length > i)
+      longWords.push(words[j]);
+  return longWords;
+}
+
+console.log("Expected output if filterLongWords(\"midnight\", \"freedom\", \"possibility\", \"grocery\", \"church\", 7) is [\"midnight\", \"possibility\"]  " + myFunctionTest(["midnight", "possibility"], filterLongWords(["midnight", "freedom", "possibility", "grocery", "church"], 7)));
     </script>
 </head>
 <body>
