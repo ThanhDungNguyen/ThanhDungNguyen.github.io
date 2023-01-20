@@ -49,6 +49,25 @@ console.log("Expected output of isVowel(\"l\") is false  " + myFunctionTest(fals
 console.log("Expected output of isVowel(\"o\") is true  " + myFunctionTest(true, isVowel("o")));
 console.log("Expected output of isVowel(\"p\") is false  " + myFunctionTest(false, isVowel("p")));
 console.log("Expected output of isVowel(\"u\") is true  " + myFunctionTest(true, isVowel("u")));
+
+// 4. Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
+function sum(arr) {
+  let sum = 0;
+  for (i in arr)
+    sum += arr[i];
+  return sum;
+}
+
+console.log("Expected output if sum([1,2,3,4] is 10  " + myFunctionTest(10, sum([1, 2, 3, 4])));
+
+function multiply(arr) {
+  let mul = 1;
+  for (i in arr)
+    mul *= arr[i];
+  return mul;
+}
+
+console.log("Expected output if multiply([1,2,3,4] is 24  " + myFunctionTest(24, multiply([1, 2, 3, 4])));
     </script>
 </head>
 <body>
