@@ -58,7 +58,7 @@ function sum(arr) {
   return sum;
 }
 
-console.log("Expected output if sum([1,2,3,4] is 10  " + myFunctionTest(10, sum([1, 2, 3, 4])));
+console.log("Expected output if sum([1,2,3,4]) is 10  " + myFunctionTest(10, sum([1, 2, 3, 4])));
 
 function multiply(arr) {
   let mul = 1;
@@ -67,7 +67,17 @@ function multiply(arr) {
   return mul;
 }
 
-console.log("Expected output if multiply([1,2,3,4] is 24  " + myFunctionTest(24, multiply([1, 2, 3, 4])));
+console.log("Expected output if multiply([1,2,3,4]) is 24  " + myFunctionTest(24, multiply([1, 2, 3, 4])));
+
+// 5. Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
+function reverse(str){
+  let result = "";
+  for(let i = str.length - 1; i >= 0; i--)
+    result += str[i];
+  return result;
+}
+
+console.log("Expected output if reverse(\"jag testar\") is ratset gaj  " + myFunctionTest("ratset gaj", reverse("jag testar")));
     </script>
 </head>
 <body>
