@@ -78,6 +78,17 @@ function reverse(str){
 }
 
 console.log("Expected output if reverse(\"jag testar\") is ratset gaj  " + myFunctionTest("ratset gaj", reverse("jag testar")));
+
+// 6. Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
+function findLongestWord(words) {
+  let maxLength = 0;
+  for (i in words)
+    if (words[i].length > maxLength)
+      maxLength = words[i].length;
+  return maxLength;
+}
+
+console.log("Expected output if findLongestWord(\"midnight\", \"freedom\", \"possibility\", \"grocery\", \"church\") is 11  " + myFunctionTest(11, findLongestWord(["midnight", "freedom", "possibility", "grocery", "church"])));
     </script>
 </head>
 <body>
