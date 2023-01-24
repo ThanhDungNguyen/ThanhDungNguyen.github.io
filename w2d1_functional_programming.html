@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0152)https://sakai.cs.miu.edu/access/content/attachment/7f34553a-06c2-4186-bc86-5d6038a0e35a/Assignments/b360f316-2cb6-4215-8c4e-cc7561a9b1cd/JsIntroLab.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>W2D1 - Functional Programming</title>
+    <script>
+
+        /* runs test to see if expected argument is === to value returned by function2test argument */
+        function myFunctionTest(expected, found) {
+            if (Array.isArray(expected)) {
+                let isPass = true;
+                expected.forEach((val, i) => { if (val != found[i]) isPass = false; });
+                return isPass ? "TEST SUCCEEDED" : "TEST FAILED.  Expected " + expected + " found " + found ;
+            } else if (expected === found) {
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + found;
+            }
+        }
+
+        // 4. Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
+        let sum = [1, 2, 3, 4].reduce((total, val) => total + val, 0);
+        console.log("Expected output if sum([1,2,3,4]) is 10  " + myFunctionTest(10, sum));
+
+        let product = [1, 2, 3, 4].reduce((product, val) => product * val, 1);
+        console.log("Expected output if multiply([1,2,3,4]) is 24  " + myFunctionTest(24, product));
+
+        // 5. Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
+        let chars = "jag testar".split("");
+        let reversal = chars.reduceRight((result, char) => result + char, "");
+        console.log("Expected output if reverse(\"jag testar\") is ratset gaj  " + myFunctionTest("ratset gaj", reversal));
+
+        // 7. Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
+        let filterWords = ["midnight", "freedom", "possibility", "grocery", "church"].filter((word) => word.length > 7);
+        console.log("Expected output if filterLongWords(\"midnight\", \"freedom\", \"possibility\", \"grocery\", \"church\", 7) is [\"midnight\", \"possibility\"]  " + myFunctionTest(["midnight", "possibility"], filterWords));
+    </script>
+</head>
+
+<body>
+
+    Look in the Chrome developer console to see the output. CTRL_SHIFT_J <br>
+    Or on Firefox with CTRL_SHIFT_K
+
+
+</body>
+
+</html>
