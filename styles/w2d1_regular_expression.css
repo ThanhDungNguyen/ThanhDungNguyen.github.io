@@ -8,9 +8,16 @@ form {
 }
 
 div {
+    margin: 10px;
+}
+
+.flexRow {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+}
+
+.inlineRow {
+    display: inline;
 }
 
 label, input {
@@ -20,10 +27,6 @@ label, input {
 
 input[type="text"], input[type="password"] {
     padding: 10px;
-}
-
-.inlineRow {
-    display: inline;
 }
 
 #checkMeOutCheckboxId, #checkMeOutLabelId {
