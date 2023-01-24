@@ -3,10 +3,6 @@ body {
     font-size: 12pt;
 }
 
-form {
-    flex-direction: column;
-}
-
 div {
     margin: 10px;
 }
@@ -14,10 +10,6 @@ div {
 .flexRow {
     display: flex;
     flex-direction: column;
-}
-
-.inlineRow {
-    display: inline;
 }
 
 label, input {
@@ -45,5 +37,4 @@ input[type="submit"] {
     font-size: 16px;
     color: white;
     padding: 15px 25px;
-    margin: 15px;
 }
