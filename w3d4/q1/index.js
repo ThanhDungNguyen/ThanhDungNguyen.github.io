@@ -5,6 +5,12 @@ app.get('/', (req, res) => {
     if (!name) {
         name = "person";
     }
-    res.send(`Welcome ${name}`);
+
+    let age = req.query.age;
+    if (!age) {
+        age = 18;
+    }
+
+    res.send(`Welcome ${name}. You are ${age}.`);
 });
 app.listen(3000);
