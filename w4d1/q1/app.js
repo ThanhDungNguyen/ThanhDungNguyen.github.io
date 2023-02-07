@@ -17,8 +17,7 @@ app.get("/", (req, res) => {
 
 app.post("/add", (req, res) => {
     console.log("Received POST request: " + JSON.stringify(req.body));
-    res.cookie('key', req.body.key, { maxAge: 10 * 60 * 1000, httpOnly: true });
-    res.cookie('value', req.body.value, { maxAge: 10 * 60 * 1000, httpOnly: true });
+    res.cookie(req.body.key, req.body.value, { maxAge: 10 * 60 * 1000, httpOnly: true });
     res.send("Cookie has been set");
 });
 
