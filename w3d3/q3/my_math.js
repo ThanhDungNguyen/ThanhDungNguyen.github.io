@@ -1,4 +1,6 @@
 class Math {
+    pi = 3.14;
+    
     add(x, y) {
         return x + y;
     }
