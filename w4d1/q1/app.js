@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
     console.log("Received GET request: " + JSON.stringify(req.cookies));
-    res.render("add-cookie");
+    res.render("add-cookie", {cookies: req.cookies});
 });
 
 app.post("/add", (req, res) => {

@@ -3,6 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Add Cookie</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            th, td {
+                border: solid 1px;
+                padding: 5px;
+            }
+        </style>
     </head>
     <body>
         <h3>Add Cookie</h3>
@@ -11,5 +20,18 @@
             <input type="text" name="value">
             <input type="submit" value="Submit">
         </form>
+        <h3>Added Cookies</h3>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            <% for(key in cookies) { %>
+            <tr>
+                <td><%= key %></td>
+                <td><%= cookies[key] %></td>
+            </tr>
+            <% } %>
+        </table>
     </body>
 </html>
