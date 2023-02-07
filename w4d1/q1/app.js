@@ -11,11 +11,14 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
+    console.log("Received GET request: " + JSON.stringify(req.cookies));
     res.render("add-cookie");
 });
 
 app.post("/add", (req, res) => {
-    console.log(req.body);
+    console.log("Received POST request: " + JSON.stringify(req.body));
+    res.cookie('key', req.body.key, { maxAge: 10 * 60 * 1000, httpOnly: true });
+    res.cookie('value', req.body.value, { maxAge: 10 * 60 * 1000, httpOnly: true });
     res.send("Cookie has been set");
 });
 
