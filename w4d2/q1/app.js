@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/add", (req, res) => {
-    console.log(req.body);
+    console.log("Received ADD request: " + JSON.stringify(req.body));
     list[req.body.fname + " " + req.body.lname] = { ...req.body };
     res.status(200);
     res.end();
