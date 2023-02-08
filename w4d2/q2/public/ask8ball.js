@@ -4,5 +4,6 @@ $(function(){
 });
 
 function submit() {
-    console.log("Submitting...");
+    let question = $("#question").val();
+    console.log("Question: " + question);
 }
