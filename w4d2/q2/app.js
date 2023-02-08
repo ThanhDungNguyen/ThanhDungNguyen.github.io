@@ -2,9 +2,12 @@ const express = require('express');
 
 const app = express();
 
+app.set("views", "./views");
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
     console.log("Received GET request");
-    res.send("Welcome");
+    res.render("index");
 });
 
 app.listen(3000, () => {
